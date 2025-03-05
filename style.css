@@ -120,7 +120,7 @@ h2 {
 
 /* 🔹 Button Hover Effect */
 .btn:hover {
-    background-color: #yellow; /* ✅ yellow background on hover */
+    background-color: yellow; /* ✅ yellow background on hover */
     color: black; /* ✅ Dark text on hover */
 }
 
