@@ -40,9 +40,12 @@ nav ul li a {
 nav ul li a:hover {
     background-color: white; /* ✅ White background on hover */
     color: #222; /* ✅ Dark text for better readability */
-    border-radius: 5px; /* ✅ Soft, rounded corners */
-    padding: 8px 12px; /* ✅ Keeps button size consistent */
+    padding: 10px 15px; /* ✅ Ensures the hover effect covers the area */
+    display: inline-block; /* ✅ Ensures proper box display */
+    border-radius: 5px; /* ✅ Soft rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 /* 🔹 Layout for Sections */
 .container {
@@ -117,12 +120,12 @@ h2 {
 
 /* 🔹 Button Hover Effect */
 .btn:hover {
-    background-color: #ccc; /* ✅ Light gray background on hover */
-    color: #333; /* ✅ Dark text on hover */
+    background-color: #yellow; /* ✅ yellow background on hover */
+    color: black; /* ✅ Dark text on hover */
 }
 
 /* 🔹 Boxed Layout for Experience, Projects, and Achievements */
-#experience, #projects, #achievements {
+#experience, #projects, #achievements,#about,#education,#skills,#contact {
     background: white; /* ✅ Keeps sections white for uniformity */
     border-left: 5px solid #888; /* ✅ Adds a gray left border */
     padding: 20px;
@@ -151,5 +154,5 @@ h2 {
 
 /* 🔹 Contact Links Hover Effect */
 #contact a:hover {
-    color: #888; /* ✅ Medium gray on hover */
+    color: orange; /* ✅ Medium gray on hover */
 }
