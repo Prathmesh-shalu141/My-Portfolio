@@ -46,11 +46,12 @@ section {
 }
 
 #about img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+   width: 200px;  /* Adjust width as needed */
+    height: 200px; /* Make it square */
+    border-radius: 10px; /* Slightly rounded edges */
     display: block;
     margin: 0 auto;
+    object-fit: cover; /* Ensures the image fills the square without distortion */
 }
 
 /* Section Titles */
