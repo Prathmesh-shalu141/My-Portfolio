@@ -1,136 +1,155 @@
+/* 🔹 General Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* ✅ Uses a clean, professional font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* ✅ Light gray background for a subtle, neutral look */
+    color: #333; /* ✅ Dark gray text for readability */
 }
 
-/* Header */
+/* 🔹 Header Styling */
 header {
-    background-color: #222;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
+    background-color: #222; /* ✅ Dark background for contrast */
+    color: white; /* ✅ White text for better readability */
+    padding: 1em 0; /* ✅ Adds space around header elements */
+    text-align: center; /* ✅ Centers text */
 }
 
-/* Navigation */
+/* 🔹 Navigation Menu */
 nav ul {
-    list-style: none;
+    list-style: none; /* ✅ Removes default bullet points */
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* ✅ Centers menu items */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* ✅ Adds space between menu items */
 }
 
+/* 🔹 Navigation Links */
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* ✅ White text for good visibility on dark background */
+    text-decoration: none; /* ✅ Removes underline */
+    font-weight: bold; /* ✅ Makes text bold */
+    padding: 8px 12px; /* ✅ Adds spacing for better clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ✅ Smooth hover effect */
 }
 
-/* Grid Layout for Sections */
+/* 🔹 Navigation Hover Effect */
+nav ul li a:hover {
+    background-color: white; /* ✅ White background on hover */
+    color: #222; /* ✅ Dark text for better readability */
+    border-radius: 5px; /* ✅ Soft, rounded corners */
+    padding: 8px 12px; /* ✅ Keeps button size consistent */
+}
+
+/* 🔹 Layout for Sections */
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
+    display: grid; /* ✅ Uses a flexible grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ Responsive columns */
+    gap: 20px; /* ✅ Adds space between sections */
+    max-width: 1100px; /* ✅ Keeps content well-aligned */
     margin: auto;
     padding: 20px;
 }
 
+/* 🔹 Section Styling */
 section {
-    background-color: gray;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+    background-color: white; /* ✅ Consistent white background for all sections */
+    padding: 20px; /* ✅ Adds spacing inside sections */
+    border-radius: 10px; /* ✅ Rounded corners for a smooth look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* ✅ Adds a soft shadow */
+    transition: transform 0.3s ease; /* ✅ Subtle zoom effect on hover */
 }
 
+/* 🔹 Hover Effect on Sections */
 section:hover {
-    transform: scale(1.02);
+    transform: scale(1.02); /* ✅ Enlarges slightly when hovered */
 }
 
+/* 🔹 Section Headings */
 h2 {
-    text-align: center;
-    color: #222;
-    border-bottom: 3px solid #888;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    text-align: center; /* ✅ Centers headings */
+    color: #222; /* ✅ Dark gray for strong visibility */
+    border-bottom: 3px solid #888; /* ✅ Underline effect with medium gray */
+    padding-bottom: 5px; /* ✅ Adds space below underline */
+    margin-bottom: 20px; /* ✅ Keeps spacing consistent */
+    text-transform: uppercase; /* ✅ Converts text to uppercase */
 }
 
-/* Profile Image - Square */
+/* 🔹 Profile Image */
 #about img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
+    width: 200px; /* ✅ Sets width */
+    height: 200px; /* ✅ Sets height */
+    border-radius: 10px; /* ✅ Keeps a square shape with slightly rounded edges */
     display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    border: 4px solid #888;
+    margin: 0 auto; /* ✅ Centers the image */
+    object-fit: cover; /* ✅ Ensures the image fits inside the square */
+    border: 4px solid #888; /* ✅ Medium gray border for a stylish look */
 }
 
-/* Buttons for Interests & Skills */
+/* 🔹 Button Styling */
 .button-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
     justify-content: center;
-    gap: 10px;
+    gap: 10px; /* ✅ Adds space between buttons */
     margin-top: 10px;
 }
 
 .btn {
-    background-color: #444;
-    color: white;
+    background-color: #444; /* ✅ Dark gray background for a sleek look */
+    color: white; /* ✅ White text for contrast */
     border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
+    padding: 10px 15px; /* ✅ Makes buttons easier to click */
+    border-radius: 20px; /* ✅ Rounded buttons */
     cursor: pointer;
     font-size: 14px;
     transition: 0.3s ease;
 }
 
+/* 🔹 Highlighted Buttons */
 .btn-highlight {
-    background-color: #888;
+    background-color: #888; /* ✅ Medium gray for a modern look */
     color: white;
 }
 
+/* 🔹 Button Hover Effect */
 .btn:hover {
-    background-color: #ccc;
-    color: #333;
+    background-color: #ccc; /* ✅ Light gray background on hover */
+    color: #333; /* ✅ Dark text on hover */
 }
 
-/* Boxed Layout for Sections */
+/* 🔹 Boxed Layout for Experience, Projects, and Achievements */
 #experience, #projects, #achievements {
-    background: #fff;
-    border-left: 5px solid #888;
+    background: white; /* ✅ Keeps sections white for uniformity */
+    border-left: 5px solid #888; /* ✅ Adds a gray left border */
     padding: 20px;
 }
 
-/* Achievements - Bullet Points */
+/* 🔹 Bullet Points for Achievements */
 #achievements ul {
-    list-style-type: disc;
+    list-style-type: disc; /* ✅ Uses standard bullet points */
     padding-left: 20px;
 }
 
-/* Contact Section */
+/* 🔹 Contact Section */
 #contact {
-    text-align: center;
+    text-align: center; /* ✅ Centers contact info */
     margin-top: 20px;
 }
 
+/* 🔹 Contact Links */
 #contact a {
     margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    transition: 0.3s ease;
+    text-decoration: none; /* ✅ Removes underline */
+    font-weight: bold; /* ✅ Makes links bold */
+    color: #333; /* ✅ Dark gray text */
+    transition: 0.3s ease; /* ✅ Smooth hover effect */
 }
 
+/* 🔹 Contact Links Hover Effect */
 #contact a:hover {
-    color: #888;
+    color: #888; /* ✅ Medium gray on hover */
 }
