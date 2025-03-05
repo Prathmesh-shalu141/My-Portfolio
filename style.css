@@ -46,13 +46,15 @@ section {
     text-align: center;
 }
 
+/* Profile Image - Square */
 #about img {
-    max-width: 150px;
-    border-radius: 50%;
+    width: 200px;  /* Adjust width as needed */
+    height: 200px; /* Make it square */
+    border-radius: 10px; /* Slightly rounded edges */
     display: block;
     margin: 0 auto;
+    object-fit: cover; /* Ensures the image fills the square without distortion */
 }
-
 /* Buttons */
 .button-group {
     display: flex;
@@ -83,14 +85,13 @@ section {
     color: #333;
 }
 
-/* Achievements */
-#achievements form {
-    text-align: center;
-    background: #eee;
-    padding: 15px;
-    border-radius: 10px;
-}
 
-#achievements input[type="radio"] {
-    margin-right: 10px;
+#achievements ul {
+    list-style-type: disc;  /* Bullet points */
+    padding-left: 20px;
+}
+/* Achievements - Use Bullet Points */
+#achievements ul {
+    list-style-type: disc;  /* Bullet points */
+    padding-left: 20px;
 }
