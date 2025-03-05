@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll("section");
 
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
@@ -31,5 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.classList.remove("active");
             }
         });
+    });
+
+    // Grid animations on scroll
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
