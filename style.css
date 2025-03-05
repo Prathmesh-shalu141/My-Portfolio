@@ -43,10 +43,10 @@ nav ul li a {
 }
 
 section {
-    background-color: white;
+    background-color: gray;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
@@ -95,7 +95,7 @@ h2 {
 }
 
 .btn-highlight {
-    background-color: #888;
+    background-color: #444;
     color: white;
 }
 
