@@ -30,14 +30,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
-    padding: 8px 12px;
-    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #888;
     color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Grid Layout for Sections */
@@ -51,10 +51,10 @@ nav ul li a:hover {
 }
 
 section {
-    background-color: lightgray;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -103,7 +103,7 @@ h2 {
 }
 
 .btn-highlight {
-    background-color: #444;
+    background-color: #888;
     color: white;
 }
 
@@ -114,7 +114,7 @@ h2 {
 
 /* Boxed Layout for Sections */
 #experience, #projects, #achievements {
-    background: #fff;
+    background: white;
     border-left: 5px solid #888;
     padding: 20px;
 }
@@ -140,5 +140,5 @@ h2 {
 }
 
 #contact a:hover {
-    color: #888;
+    color: #333;
 }
