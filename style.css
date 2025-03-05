@@ -8,7 +8,7 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
     padding: 1em 0;
     text-align: center;
@@ -32,6 +32,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Section Styling */
 section {
     padding: 20px;
     margin: 20px;
@@ -40,29 +41,27 @@ section {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Profile Image */
-#about {
-    text-align: center;
-}
-
-#about img {
-   width: 200px;  /* Adjust width as needed */
-    height: 200px; /* Make it square */
-    border-radius: 10px; /* Slightly rounded edges */
-    display: block;
-    margin: 0 auto;
-    object-fit: cover; /* Ensures the image fills the square without distortion */
-}
-
-/* Section Titles */
 h2 {
     text-align: center;
     color: #222;
-    border-bottom: 2px solid #444;
+    border-bottom: 3px solid #444;
     padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-/* Styled Buttons */
+/* Profile Image - Square */
+#about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 4px solid #ff6600;
+}
+
+/* Buttons for Interests & Skills */
 .button-group {
     display: flex;
     flex-wrap: wrap;
@@ -82,25 +81,25 @@ h2 {
     transition: 0.3s ease;
 }
 
+.btn-highlight {
+    background-color: #ff6600;
+    color: white;
+}
+
 .btn:hover {
     background-color: #ffcc00;
     color: #333;
 }
 
-/* Contact Section */
-#contact {
-    text-align: center;
-    margin-top: 20px;
+/* Boxed Layout for Sections */
+#experience, #projects, #achievements {
+    background: #fdfdfd;
+    border-left: 5px solid #ff6600;
+    padding: 20px;
 }
 
-#contact a {
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    transition: 0.3s ease;
-}
-
-#contact a:hover {
-    color: #ff6600;
+/* Achievements - Bullet Points */
+#achievements ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
