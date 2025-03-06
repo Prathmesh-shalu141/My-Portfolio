@@ -299,6 +299,75 @@ h2 {
     border-left: 5px solid #888; /* ✅ Adds a gray left border */
     padding: 20px;
 }
+/* 🔹 Mobile Navigation */
+.menu-toggle {
+    display: none; /* Initially hidden */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button */
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Adjusting Section Layouts */
+    .about-container, .skills-container, .project-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
 
 /* 🔹 Bullet Points for Achievements */
 #achievements ul {
