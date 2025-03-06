@@ -142,8 +142,6 @@ nav ul li a:hover {
     top: 4px;
 }
 
-
-
 /* 🔹 Layout for Sections */
 .container {
     display: grid; /* ✅ Uses a flexible grid layout */
