@@ -92,6 +92,57 @@ nav ul li a:hover {
     text-align: center;
 }
 
+#experience {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.experience-card {
+    background: #f8f9fa;  /* Light gray background */
+    border-left: 5px solid #6c757d; /* Dark gray accent on the left */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.experience-card h3 {
+    color: #343a40; /* Dark text for company name */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    color: #6c757d; /* Slightly lighter text */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-card ul li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 16px;
+    color: #495057; /* Medium gray text */
+    margin-bottom: 8px;
+}
+
+.experience-card ul li::before {
+    content: "●";  /* Bullet points */
+    color: #6c757d; /* Gray bullet */
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+
 
 /* 🔹 Layout for Sections */
 .container {
@@ -245,7 +296,7 @@ h2 {
 }
 
 /* 🔹 Boxed Layout for Experience, Projects, and Achievements */
-#experience, #projects, #achievements,#education,#skills,#contact {
+#projects, #achievements,#education,#skills,#contact {
     background: white; /* ✅ Keeps sections white for uniformity */
     border-left: 5px solid #888; /* ✅ Adds a gray left border */
     padding: 20px;
