@@ -72,9 +72,9 @@ nav ul li a:hover {
 }
 
 .about-image {
-    flex: 0.5;
+    flex: 0.7;
     text-align: center;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .about-image img {
