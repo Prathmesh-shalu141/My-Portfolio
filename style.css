@@ -81,8 +81,10 @@ nav ul li a:hover {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain; /* Ensures the whole image is visible */
+    object-position: top; /* Adjusts focus to the top part of the image */
     border: 4px solid #ddd;
+    background-color: white; /* Optional: Adds a background if the image has transparency */
 }
 
 .about-interests {
