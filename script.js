@@ -1,49 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav ul li a");
-    const sections = document.querySelectorAll("section");
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="experience-card">
+        <h3>CSG Systems International, Bangalore, India</h3>
+        <p class="job-title"><strong>Software Development Engineer</strong> | November 2021 - June 2023</p>
+        <ul>
+            <li>Developed Robotic Process Automation (RPA) solutions using Automation Anywhere in the Solution and Innovation Group.</li>
+            <li>Utilized Automation Anywhere Object Recorder to manage and execute Windows controls as background processes.</li>
+            <li>Configured Automation Anywhere Control Room and Runner Machines on servers.</li>
+            <li>Designed and implemented Azure DevOps pipelines to manage resources in Azure.</li>
+            <li>Leveraged Azure DevOps services including Azure Repos, Azure Artifacts, and Azure Test Plans for work planning, code development collaboration, and application building and deployment.</li>
+        </ul>
+    </div>
 
-    // Smooth scrolling for navigation links
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Highlight active section on scroll
-    window.addEventListener("scroll", function () {
-        let scrollPosition = window.scrollY + 100;
-
-        navLinks.forEach(link => {
-            let section = document.querySelector(link.getAttribute("href"));
-            if (
-                section.offsetTop <= scrollPosition &&
-                section.offsetTop + section.offsetHeight > scrollPosition
-            ) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
-    });
-
-    // Grid animations on scroll
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
-            }
-        });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});
+    <div class="experience-card">
+        <h3>CSG Systems International, Bangalore, India</h3>
+        <p class="job-title"><strong>Software Development Engineer Intern</strong> | March 2021 - November 2021</p>
+        <ul>
+            <li>Developed UI for requirement capture & dynamic package display.</li>
+            <li>Implemented popularity-based package listing & recommended add-ons.</li>
+        </ul>
+    </div>
+</section>
