@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.createElement("button");
-    menuToggle.innerHTML = "☰";
-    menuToggle.classList.add("menu-toggle");
-    document.querySelector("header").appendChild(menuToggle);
+    // Smooth scrolling for navigation links
+    document.querySelectorAll("nav ul li a").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({ behavior: "smooth" });
+        });
+    });
 
-    const navMenu = document.querySelector("nav ul");
-
-    menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
+    // Button hover animation
+    document.querySelectorAll(".btn").forEach(button => {
+        button.addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.1)";
+        });
+        button.addEventListener("mouseleave", function () {
+            this.style.transform = "scale(1)";
+        });
     });
 });
