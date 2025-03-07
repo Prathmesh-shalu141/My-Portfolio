@@ -1,24 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let navLinks = document.querySelectorAll("nav ul li a");
+    const menuToggle = document.createElement("button");
+    menuToggle.innerHTML = "☰";
+    menuToggle.classList.add("menu-toggle");
+    document.querySelector("header").appendChild(menuToggle);
 
-    navLinks.forEach(link => {
-        link.addEventListener("mouseenter", function () {
-            this.style.color = "#ffcc00";
-        });
+    const navMenu = document.querySelector("nav ul");
 
-        link.addEventListener("mouseleave", function () {
-            this.style.color = "white";
-        });
-    });
-
-    let projectCards = document.querySelectorAll(".project-card");
-    projectCards.forEach(card => {
-        card.addEventListener("mouseover", function () {
-            this.style.background = "#b0c4de";
-        });
-
-        card.addEventListener("mouseleave", function () {
-            this.style.background = "#ddd";
-        });
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
     });
 });
