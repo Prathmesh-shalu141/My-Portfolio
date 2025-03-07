@@ -3,96 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prathmesh Shalu - Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <header>
         <div class="container">
-            <a class="navbar-brand" href="#">Prathmesh Shalu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Connect</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container text-center">
-            <img src="your-image.png" class="profile-img" alt="Your Image">
             <h1>Prathmesh Shalu</h1>
-            <p>M.Tech CSE (RA) @ IIT Hyderabad</p>
+            <p>M.Tech CSE (RA) @ IIT H</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container section">
-        <h2>About Me</h2>
-        <p>Passionate about high-performance computing and AI acceleration...</p>
+    <section id="about">
+        <div class="container about-section">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Passionate about high-performance computing and AI acceleration, I specialize in AMD Xilinx Versal ACAP architecture, exploring AI Engine (AIE) capabilities for compute-intensive applications like matrix multiplications. My work involves optimizing task mapping between AI Engines and Programmable Logic (PL) to enhance hardware acceleration, efficiency, and power optimization.</p>
+                <p>Currently, I’m researching advanced optimization strategies to improve deep learning models (CNNs, GNNs, ViTs) on Versal ACAP, aiming to reduce latency, boost computational throughput, and maximize performance.</p>
+            </div>
+            <div class="about-image">
+                <img src="your-image.png" alt="Your Image">
+            </div>
+        </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="container section">
-        <h2>Work Experience</h2>
-        <div class="experience-card">
-            <h3>CSG Systems International, Bangalore</h3>
-            <p><strong>SDE I</strong> | Nov 2021 - June 2023</p>
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-card">
+                <h3>CSG Systems International, Bangalore, India</h3>
+                <p class="job-title"><strong>SDE I</strong> | November 2021 - June 2023</p>
+                <ul>
+                    <li>Developed Robotic Process Automation (RPA) solutions using Automation Anywhere.</li>
+                    <li>Configured Automation Anywhere Control Room and Runner Machines.</li>
+                    <li>Designed and implemented Azure DevOps pipelines.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p>M.Tech CSE (RA) | IIT Hyderabad | Aug 2023 - June 2026</p>
+            <p>B.E CSE | SJB Institute of Technology, Bangalore | CGPA: 8.24</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Social Distancing Detector</h3>
+                <p>Developed a computer vision application to detect social distancing violations using YOLO.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
             <ul>
-                <li>Developed Robotic Process Automation (RPA) solutions using Automation Anywhere...</li>
+                <li>Programming: C, C++, Python</li>
+                <li>AI & Machine Learning: Deep Learning (CNNs, GNNs, ViTs)</li>
+                <li>Hardware & Acceleration: AMD Xilinx Versal ACAP</li>
             </ul>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="container section">
-        <h2>Education</h2>
-        <p>M.Tech CSE (RA) | IIT Hyderabad</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container section">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="project.png" alt="Project Image">
-            <h3>Social Distancing Detector</h3>
-            <p>Developed a computer vision application using YOLO...</p>
+    <section id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Certified in Dr. Homi Bhabha Balvaidnyanik competition</li>
+                <li>Achieved AIR 938 in GATE CSE 2023</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fas fa-code"></i><p>Programming: C, C++, Python</p></div>
+    <section id="contact">
+        <div class="container">
+            <h2>Connect</h2>
+            <a href="https://www.linkedin.com/in/shalu-prathmesh-rajiv/">LinkedIn</a>
+            <a href="https://prathmesh-shalu141.github.io/My-Portfolio">GitHub</a>
         </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="container section">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Certified in Dr. Homi Bhabha Balvaidnyanik competition</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container section">
-        <h2>Connect</h2>
-        <a href="https://www.linkedin.com/in/shalu-prathmesh-rajiv/">LinkedIn</a>
     </section>
 
     <script src="script.js"></script>
