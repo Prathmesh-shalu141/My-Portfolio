@@ -3,107 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Prathmesh Shalu - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Prathmesh Shalu</h1>
-        <p>M.Tech CSE (RA) @ IIT H</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>Passionate about high-performance computing and AI acceleration, I specialize in AMD Xilinx Versal ACAP architecture...</p>
-            </div>
-            <div class="about-image">
-                <img src="your-image.png" alt="Your Image">
-            </div>
-            <div class="about-interests">
-                <h3>Areas of Interest</h3>
-                <div class="button-group">
-                    <button class="btn btn-highlight">Computer Architecture</button>
-                    <button class="btn btn-highlight">High-Performance Computing (HPC)</button>
-                    <button class="btn btn-highlight">AI & Hardware Acceleration</button>
-                    <button class="btn btn-highlight">AMD Xilinx Versal ACAP & AI Engine (AIE) Architectures</button>
-                    <button class="btn btn-highlight">Hardware for Deep Learning</button>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Prathmesh Shalu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Connect</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container text-center">
+            <img src="your-image.png" class="profile-img" alt="Your Image">
+            <h1>Prathmesh Shalu</h1>
+            <p>M.Tech CSE (RA) @ IIT Hyderabad</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container section">
+        <h2>About Me</h2>
+        <p>Passionate about high-performance computing and AI acceleration...</p>
     </section>
 
-    <section id="experience">
+    <!-- Experience Section -->
+    <section id="experience" class="container section">
         <h2>Work Experience</h2>
         <div class="experience-card">
-            <h3>CSG Systems International, Bangalore, India</h3>
-            <p class="job-title"><strong>SDE &#8544;</strong> | November 2021 - June 2023</p>
+            <h3>CSG Systems International, Bangalore</h3>
+            <p><strong>SDE I</strong> | Nov 2021 - June 2023</p>
             <ul>
                 <li>Developed Robotic Process Automation (RPA) solutions using Automation Anywhere...</li>
             </ul>
         </div>
-        <div class="experience-card">
-            <h3>CSG Systems International, Bangalore, India</h3>
-            <p class="job-title"><strong>SDE Intern</strong> | March 2021 - November 2021</p>
-            <ul>
-                <li>Developed UI for requirement capture & dynamic package display.</li>
-            </ul>
-        </div>
     </section>
 
-    <section id="education">
+    <!-- Education Section -->
+    <section id="education" class="container section">
         <h2>Education</h2>
-        <div class="edu">
-            <h3>M.Tech CSE (RA) | Indian Institute of Technology, Hyderabad</h3>
-            <p>Aug 2023 - June 2026</p>
-        </div>
+        <p>M.Tech CSE (RA) | IIT Hyderabad</p>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="container section">
         <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="project.png" alt="Project Image">
-                <div class="project-info">
-                    <h3>Social Distancing Detector</h3>
-                    <p>Developed a computer vision application to detect social distancing violations...</p>
-                </div>
-            </div>
+        <div class="project-card">
+            <img src="project.png" alt="Project Image">
+            <h3>Social Distancing Detector</h3>
+            <p>Developed a computer vision application using YOLO...</p>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="container section">
         <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card"><h3>Programming</h3><p>C, C++, Python</p></div>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fas fa-code"></i><p>Programming: C, C++, Python</p></div>
         </div>
     </section>
 
-    <section id="achievements">
+    <!-- Achievements Section -->
+    <section id="achievements" class="container section">
         <h2>Achievements</h2>
         <ul>
             <li>Certified in Dr. Homi Bhabha Balvaidnyanik competition</li>
         </ul>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="container section">
         <h2>Connect</h2>
         <a href="https://www.linkedin.com/in/shalu-prathmesh-rajiv/">LinkedIn</a>
-        <a href="https://prathmesh-shalu141.github.io/My-Portfolio">GitHub</a>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
