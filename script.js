@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".section");
-    const navLinks = document.querySelectorAll(".nav-link");
+    let navLinks = document.querySelectorAll("nav ul li a");
 
-    function highlightNav() {
-        let scrollPos = window.scrollY;
-        sections.forEach((section) => {
-            if (
-                scrollPos >= section.offsetTop - 50 &&
-                scrollPos < section.offsetTop + section.offsetHeight
-            ) {
-                let id = section.getAttribute("id");
-                navLinks.forEach((link) => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href").substring(1) === id) {
-                        link.classList.add("active");
-                    }
-                });
-            }
+    navLinks.forEach(link => {
+        link.addEventListener("mouseenter", function () {
+            this.style.color = "#ffcc00";
         });
-    }
 
-    window.addEventListener("scroll", highlightNav);
+        link.addEventListener("mouseleave", function () {
+            this.style.color = "white";
+        });
+    });
+
+    let projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach(card => {
+        card.addEventListener("mouseover", function () {
+            this.style.background = "#b0c4de";
+        });
+
+        card.addEventListener("mouseleave", function () {
+            this.style.background = "#ddd";
+        });
+    });
 });
