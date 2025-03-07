@@ -1,81 +1,63 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-header {
-    text-align: center;
-    background: #222;
-    color: white;
-    padding: 20px;
+.navbar {
+    background-color: #343a40;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar-brand {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #f5a623;
-}
-
-.about-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background: white;
-    border-radius: 10px;
-}
-
-.about-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.button-group .btn {
-    background: #444;
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('banner.jpg') no-repeat center center/cover;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 100px 0;
+    text-align: center;
 }
 
-.button-group .btn:hover {
-    background: #f5a623;
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
 }
 
-.experience-card, .edu, .project-card, .skills-container {
+.section {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.experience-card, .project-card {
     background: white;
     padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-card {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 a {
-    display: block;
-    margin-top: 10px;
-    color: #007bff;
     text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
 }
 
 a:hover {
