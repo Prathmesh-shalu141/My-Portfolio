@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research Work</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,7 +30,7 @@
   </header>
 
   <section class="container">
-    <h2>1. Understanding Versal ACAP and AI Engines</h2>
+    <h2>1.Versal ACAP and AI Engines</h2>
     <p><strong>Versal ACAP</strong> (Adaptive Compute Acceleration Platform) is a heterogeneous platform by AMD Xilinx that integrates scalar processors, adaptable hardware (FPGA), and intelligent engines (AI Engines).</p>
     <ul>
       <li><strong>AI Engines (AIEs):</strong> SIMD/VLIW processors organized in a tiled array. They support high-throughput operations, ideal for matrix/vector computations.</li>
@@ -32,8 +48,8 @@
       <li><strong>LeNet AI Engine Design:</strong> Developed AIE-based image classification using memory-aware design. Validated on hardware.</li>
       <li><strong>GeMM Matrix Multiplication:</strong> Compared and designed in RTL/DSP/PS implementations for multiple matrix sizes up to 1024x1024.</li>
     </ul>
-      <p>I have also implemented some basic applications on AIEs using Vitis tool (AI Engine Kernel and Graph Programming )</p>
-      <ul>
+    <p>I have also implemented some basic applications on AIEs using Vitis tool (AI Engine Kernel and Graph Programming )</p>
+    <ul>
       <li><strong>Parallel Merge Sort:</strong> Used 11 AI Engine kernels to sort and merge 5000 numbers with shared buffer pipelining.</li>
       <li><strong>Custom Sum Computation:</strong> Computed sum of 5000 integers using 6 parallel AI Engines mapped across different tiles.</li>
       <li><strong>Matrix Multiplication Exploration:</strong> Studied shared memory, cascade connections, and kernel placement strategies.</li>
@@ -42,57 +58,79 @@
   </section>
 
   <section class="container">
-    <h2>3. Exploration and Validation of Versal ACAP Frameworks</h2>
+    <h2>3. Exploration of Versal ACAP Frameworks</h2>
     <p>Analyzed multiple frameworks for AI acceleration on Versal ACAP including both academic research and open-source contributions:</p>
-    <ol>
-      <li><strong>CHARM/CHARM 2.0</strong>: <em>Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP Architecture</em><br>
-      <a href="https://dl.acm.org/doi/10.1145/3543622.3573210" target="_blank">Link to Paper</a><br>
-      Accelerates matrix multiplications of diverse sizes. Applied in BERT, ViT, NCF, and MLP inference.</li>
+    <table>
+      <thead>
+        <tr>
+          <th>Paper Name</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CHARM/CHARM 2.0</td>
+          <td>Accelerates matrix multiplications of diverse sizes. Applied in BERT, ViT, NCF, and MLP inference.</td>
+          <td><a href="https://dl.acm.org/doi/10.1145/3543622.3573210" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>High Performance, Low Power Matrix Multiply Design</td>
+          <td>AutoMM framework to generate efficient matrix multiplication designs on Versal ACAP.</td>
+          <td><a href="https://ieeexplore.ieee.org/document/10247981" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>H-GCN</td>
+          <td>Acceleration of GNN inference using AI Engines.</td>
+          <td><a href="https://ieeexplore.ieee.org/document/10035160" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>On-chip Heterogeneity for GNN Inference</td>
+          <td>GNN acceleration leveraging AI-PL-NoC synergy.</td>
+          <td><a href="https://ieeexplore.ieee.org/abstract/document/10296434" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>Flexible Acceleration Framework</td>
+          <td>Python-based framework generating GEMM/SpMM source code across AI Engine, PL, host, and XRT.</td>
+          <td><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10218584" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>MaxEVA</td>
+          <td>Optimized matrix multiplication framework. Shows better performance compared to CHARM.</td>
+          <td><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10416106" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>Efficient Approaches for GEMM Acceleration</td>
+          <td>Builds on MaxEVA for newer devices with high-throughput GEMM designs.</td>
+          <td><a href="https://ieeexplore.ieee.org/abstract/document/10653656" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>WideSA</td>
+          <td>Mapping strategy to improve AIE utilization for recurrence-heavy applications.</td>
+          <td><a href="https://ieeexplore.ieee.org/abstract/document/10546896" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>AIM</td>
+          <td>Accelerates LIM, RSA, and Mandelbrot with variable bit-width inputs (1024–65536 bits).</td>
+          <td><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323754" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>PyAIE</td>
+          <td>Simplifies AIE development via Python APIs and runtime control.</td>
+          <td><a href="https://ieeexplore.ieee.org/abstract/document/10247843" target="_blank">Link</a></td>
+        </tr>
+      </tbody>
+    </table>
 
-      <li><strong>High Performance, Low Power Matrix Multiply Design on ACAP</strong>: <em>from Architecture, Design Challenges and DSE Perspectives</em><br>
-      <a href="https://ieeexplore.ieee.org/document/10247981" target="_blank">Link to Paper</a><br>
-      AutoMM framework to generate efficient matrix multiplication designs on Versal ACAP.</li>
-
-      <li><strong>H-GCN</strong>: <em>A Graph Convolutional Network Accelerator on Versal ACAP Architecture</em><br>
-      <a href="https://ieeexplore.ieee.org/document/10035160" target="_blank">Link to Paper</a><br>
-      Acceleration of GNN inference using AI Engines.</li>
-
-      <li><strong>Exploiting On-chip Heterogeneity</strong>: <em>of Versal Architecture for GNN Inference Acceleration</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10296434" target="_blank">Link to Paper</a><br>
-      GNN acceleration leveraging AI-PL-NoC synergy.</li>
-
-      <li><strong>Flexible Acceleration Framework for Dense/Sparse Matrix Multiplication</strong>: <em>on Versal ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10218584&tag=1" target="_blank">Link to Paper</a><br>
-      Python-based framework generating GEMM/SpMM source code across AI Engine, PL, host, and XRT.</li>
-
-      <li><strong>MaxEVA</strong>: <em>Maximizing the Efficiency of Matrix Multiplication on Versal AI Engine</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10416106" target="_blank">Link to Paper</a><br>
-      Optimized matrix multiplication framework. Shows better performance compared to CHARM.</li>
-
-      <li><strong>Efficient Approaches for GEMM Acceleration</strong>: <em>on Leading AI-Optimized FPGAs</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10653656" target="_blank">Link to Paper</a><br>
-      Builds on MaxEVA for newer devices with high-throughput GEMM designs.</li>
-
-      <li><strong>WideSA</strong>: <em>A High Array Utilization Mapping Scheme for Uniform Recurrences on ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10546896" target="_blank">Link to Paper</a><br>
-      Focus on mapping strategy to improve AIE utilization for recurrence-heavy applications.</li>
-
-      <li><strong>AIM</strong>: <em>Accelerating Arbitrary-precision Integer Multiplication on Heterogeneous Reconfigurable Computing Platform Versal ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323754" target="_blank">Link to Paper</a><br>
-      Accelerates LIM, RSA, and Mandelbrot with variable bit-width inputs (1024–65536 bits).</li>
-
-      <li><strong>PyAIE</strong>: <em>A Python-based Programming Framework for Versal ACAP Platforms</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10247843" target="_blank">Link to Paper</a><br>
-      Simplifies AIE development via Python APIs and runtime control.</li>
-    </ol>
-
-    <p><strong>Validation:</strong> Open-source frameworks like <a href="https://github.com/arc-research-lab/CHARM" target="_blank">CHARM</a>, <a href="https://github.com/arc-research-lab/AIM" target="_blank">AIM</a>, and <a href="https://github.com/enyac-group/MaxEVA" target="_blank">MaxEVA</a> were successfully tested and validated on the VCK190 board.</p>
+    <h3>Validated Open-Source Frameworks</h3>
+    <p>Open-source frameworks were successfully tested and validated on the VCK190 board:</p>
+    <ul>
+      <li><a href="https://github.com/arc-research-lab/CHARM" target="_blank">CHARM</a></li>
+      <li><a href="https://github.com/arc-research-lab/AIM" target="_blank">AIM</a></li>
+      <li><a href="https://github.com/enyac-group/MaxEVA" target="_blank">MaxEVA</a></li>
+    </ul>
   </section>
 
-  <section id="contact" class="container">
-    <h2>Connect</h2>
-    <a href="https://www.linkedin.com/in/shalu-prathmesh-rajiv/">LinkedIn</a> |
-    <a href="https://prathmesh-shalu141.github.io/My-Portfolio">GitHub</a>
-  </section>
+  
 </body>
 </html>
