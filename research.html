@@ -44,59 +44,49 @@
 
 <section id="versal-frameworks" class="container">
   <h2>Exploration and Validation of Versal ACAP Frameworks</h2>
-  <p>Explored a range of frameworks designed for AI and matrix computation acceleration on Versal ACAP:</p>
+  <p>
+    Analyzed multiple frameworks for AI acceleration on Versal ACAP including both academic research and open-source contributions:
+  </p>
   <ul>
-    <li>
-      <strong>1. CHARM/CHARM 2.0:</strong> <em>Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP Architecture</em><br>
-      <a href="https://dl.acm.org/doi/10.1145/3543622.3573210" target="_blank">Paper Link</a><br>
-      Accelerates matrix multiplication for both small and large sizes. Used in applications like BERT, ViT, NCF, and MLP inference.
-    </li>
-    <li>
-      <strong>2. AutoMM:</strong> <em>High Performance, Low Power Matrix Multiply Design on ACAP: from Architecture, Design Challenges and DSE Perspectives</em><br>
-      <a href="https://ieeexplore.ieee.org/document/10247981" target="_blank">Paper Link</a><br>
-      Provides a framework for architecture-aware automated generation of matrix multiplication accelerators on Versal.
-    </li>
-    <li>
-      <strong>3. H-GCN:</strong> <em>A Graph Convolutional Network Accelerator on Versal ACAP Architecture</em><br>
-      <a href="https://ieeexplore.ieee.org/document/10035160" target="_blank">Paper Link</a><br>
-      Accelerates GNN inference efficiently using the heterogeneity of Versal.
-    </li>
-    <li>
-      <strong>4. GNN-Versal:</strong> <em>Exploiting On-chip Heterogeneity of Versal Architecture for GNN Inference Acceleration</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10296434" target="_blank">Paper Link</a><br>
-      Designs heterogeneous GNN inference pipelines using AIE and PL elements.
-    </li>
-    <li>
-      <strong>5. Dense/Sparse MM Framework:</strong> <em>Flexible Acceleration Framework for Dense/Sparse Matrix Multiplication on Versal ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10218584&tag=1" target="_blank">Paper Link</a><br>
-      Python-based source code generator targeting SpMM and GEMM acceleration using AIE and PL. Automates AIE/PL/host/XRT code.
-    </li>
-    <li>
-      <strong>6. MaxEVA:</strong> <em>Maximizing the Efficiency of Matrix Multiplication on Versal AI Engine</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10416106" target="_blank">Paper Link</a><br>
-      Efficient MM accelerator that improves tile utilization over CHARM.
-    </li>
-    <li>
-      <strong>7. MaxEVA Adopted:</strong> <em>Efficient Approaches for GEMM Acceleration on Leading AI-Optimized FPGAs</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10653656" target="_blank">Paper Link</a><br>
-      Builds on MaxEVA framework for improved GEMM throughput on Versal.
-    </li>
-    <li>
-      <strong>8. WideSA:</strong> <em>A High Array Utilization Mapping Scheme for Uniform Recurrences on ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10546896" target="_blank">Paper Link</a><br>
-      Maps uniform recurrences on AIE arrays to maximize utilization.
-    </li>
-    <li>
-      <strong>9. AIM:</strong> <em>Accelerating Arbitrary-precision Integer Multiplication on Heterogeneous Reconfigurable Computing Platform Versal ACAP</em><br>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323754" target="_blank">Paper Link</a><br>
-      Supports very large integer multiplication (LIM, RSA, Mandelbrot) on AI Engine.
-    </li>
-    <li>
-      <strong>10. PyAIE:</strong> <em>Late Breaking Results: PyAIE: A Python-based Programming Framework for Versal ACAP Platforms</em><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10247843" target="_blank">Paper Link</a><br>
-      Provides a Python-based framework for AI Engine programming and rapid prototyping.
-    </li>
+    <li><strong>CHARM/CHARM 2.0:</strong> <a href="https://dl.acm.org/doi/10.1145/3543622.3573210" target="_blank">Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP Architecture</a><br>
+      Designed for accelerating matrix multiplications across diverse sizes (large/small). Applied to BERT, ViT, NCF, MLP.</li>
+
+    <li><strong>High Performance, Low Power Matrix Multiply Design on ACAP:</strong> <a href="https://ieeexplore.ieee.org/document/10247981" target="_blank">from Architecture, Design Challenges and DSE Perspectives</a><br>
+      AutoMM framework for generating efficient GEMM accelerators on Versal.</li>
+
+    <li><strong>H-GCN:</strong> <a href="https://ieeexplore.ieee.org/document/10035160" target="_blank">A Graph Convolutional Network Accelerator on Versal ACAP Architecture</a><br>
+      Targeted acceleration of GNN inference using AI Engine resources.</li>
+
+    <li><strong>Exploiting On-chip Heterogeneity of Versal Architecture:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10296434" target="_blank">for GNN Inference Acceleration</a><br>
+      GNN acceleration leveraging AI-PL partitioning and NoC efficiency.</li>
+
+    <li><strong>Flexible Acceleration Framework for Dense/Sparse Matrix Multiplication:</strong> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10218584&tag=1" target="_blank">on Versal ACAP</a><br>
+      A Python-based tool generating SpMM/GEMM designs and code across AI Engine, PL, host, and XRT layers.</li>
+
+    <li><strong>MaxEVA:</strong> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10416106" target="_blank">Maximizing the Efficiency of Matrix Multiplication on Versal AI Engine</a><br>
+      Optimized matrix multiplication framework, shown to outperform CHARM in many use-cases.</li>
+
+    <li><strong>Efficient Approaches for GEMM Acceleration:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10653656" target="_blank">on Leading AI-Optimized FPGAs</a><br>
+      Extends MaxEVA to newer devices with higher throughput GEMM design patterns.</li>
+
+    <li><strong>WideSA:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10546896" target="_blank">A High Array Utilization Mapping Scheme for Uniform Recurrences on ACAP</a><br>
+      Focuses on maximizing AIE tile utilization through custom mapping strategies for recurrence-heavy tasks.</li>
+
+    <li><strong>AIM:</strong> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10323754" target="_blank">Accelerating Arbitrary-precision Integer Multiplication on Heterogeneous Reconfigurable Computing Platform Versal ACAP</a><br>
+      Supports LIM, RSA, and Mandelbrot with input widths like 1024, 4096, 65536 bits.</li>
+
+    <li><strong>PyAIE:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10247843" target="_blank">A Python-based Programming Framework for Versal ACAP Platforms</a><br>
+      Enables easier development and runtime control for AI Engine applications through Python interfaces.</li>
   </ul>
+  <p>
+    <strong>Validation:</strong> Open-source frameworks like <a href="https://github.com/arc-research-lab/CHARM" target="_blank">CHARM</a>, <a href="https://github.com/arc-research-lab/AIM" target="_blank">AIM</a>, and <a href="https://github.com/enyac-group/MaxEVA" target="_blank">MaxEVA</a> were successfully built and tested on the VCK190 board.
+  </p
+     <h3>🔸 Validated Frameworks on VCK190 Board</h3>
+    <ul>
+        <li><strong>CHARM:</strong> Verified INT8/FP32 GEMM and ViT models on monolithic and dual accelerators.</li>
+        <li><strong>MaxEVA:</strong> Benchmarked high-throughput GEMM on Versal AI Engine.</li>
+        <li><strong>AIM:</strong> Validated LIM with 1024–65536-bit integer inputs.</li>
+    </ul>
 </section>
 <section style="text-align:center;">
     <a href="index.html" class="btn btn-highlight">← Back to Home</a>
