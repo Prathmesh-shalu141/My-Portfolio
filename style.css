@@ -13,7 +13,6 @@ header {
     padding: 1em 0; /* ✅ Adds space around header elements */
     text-align: center; /* ✅ Centers text */
 }
-
 /* 🔹 Navigation Menu */
 nav ul {
     list-style: none; /* ✅ Removes default bullet points */
