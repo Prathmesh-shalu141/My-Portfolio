@@ -1,185 +1,102 @@
 /* 🔹 General Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* ✅ Uses a clean, professional font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-.about-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-}
-
-.about-left, .about-center, .about-right {
-    flex: 1;
-    min-width: 280px;
-}
-
-.about-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-center img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 3px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.research-highlight {
-    background-color: #e8f3fc;
-    border-left: 4px solid #007acc;
-    padding: 10px 15px;
-    margin: 20px 0;
-    font-weight: bold;
-    color: #005899;
-    border-radius: 5px;
-}
-
-.interest-tags {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.interest-tags li {
-    background-color: #666;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
+    background-color: #f4f4f4; /* ✅ Light gray background for a subtle, neutral look */
+    color: #333; /* ✅ Dark gray text for readability */
 }
 /* 🔹 Header Styling */
 header {
-    background-color: #222;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
+    background-color: #222; /* ✅ Dark background for contrast */
+    color: white; /* ✅ White text for better readability */
+    padding: 1em 0; /* ✅ Adds space around header elements */
+    text-align: center; /* ✅ Centers text */
 }
-
 /* 🔹 Navigation Menu */
 nav ul {
-    list-style: none;
+    list-style: none; /* ✅ Removes default bullet points */
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* ✅ Centers menu items */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* ✅ Adds space between menu items */
 }
 
+/* 🔹 Navigation Links */
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white; /* ✅ White text for good visibility on dark background */
+    text-decoration: none; /* ✅ Removes underline */
+    font-weight: bold; /* ✅ Makes text bold */
+    padding: 8px 12px; /* ✅ Adds spacing for better clickable area */
+    transition: background-color 0.3s ease, color 0.3s ease; /* ✅ Smooth hover effect */
 }
 
+/* 🔹 Navigation Hover Effect */
 nav ul li a:hover {
-    background-color: white;
-    color: #222;
-    padding: 10px 15px;
-    display: inline-block;
-    border-radius: 5px;
+    background-color: white; /* ✅ White background on hover */
+    color: #222; /* ✅ Dark text for better readability */
+    padding: 10px 15px; /* ✅ Ensures the hover effect covers the area */
+    display: inline-block; /* ✅ Ensures proper box display */
+    border-radius: 5px; /* ✅ Soft rounded corners */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* 🔹 About Section */
-#about-me {
-    background: #fff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    max-width: 1100px;
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    align-items: start;
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .about-text {
-    grid-column: 1 / span 2;
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
 }
 
-.about-image-container {
+.about-image {
+    flex: 0.7;
     text-align: center;
+    min-width: 200px;
 }
 
-.about-image-container img {
-    width: 180px;
-    height: 180px;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 4px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.research-highlight {
-    background-color: #e8f4ff;
-    color: #003c6c;
-    padding: 15px 20px;
-    border-left: 5px solid #007acc;
-    font-weight: bold;
-    margin-top: 20px;
-    border-radius: 6px;
+.about-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: contain; /* Ensures the whole image is visible */
+    object-position: top; /* Adjusts focus to the top part of the image */
+    border: 4px solid #ddd;
+    background-color: white; /* Optional: Adds a background if the image has transparency */
 }
 
 .about-interests {
-    grid-column: 1 / span 2;
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
     text-align: center;
-    margin-top: 20px;
 }
-
-.about-interests h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.interest-tags {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-.interest-tags li {
-    background: #888;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-/* 🔹 Section Headings */
-h2 {
-    text-align: center;
-    color: #222;
-    border-bottom: 3px solid #888;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.research-focus {
+  color: #007acc;
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
 }
 
 #experience {
