@@ -6,7 +6,61 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
 
+.about-left, .about-center, .about-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-center img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.research-highlight {
+    background-color: #e8f3fc;
+    border-left: 4px solid #007acc;
+    padding: 10px 15px;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #005899;
+    border-radius: 5px;
+}
+
+.interest-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.interest-tags li {
+    background-color: #666;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
 /* 🔹 Header Styling */
 header {
     background-color: #222;
