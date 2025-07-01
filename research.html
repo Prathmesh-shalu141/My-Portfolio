@@ -9,7 +9,7 @@
     body {
       font-family: sans-serif;
       margin: 40px auto;
-      max-width: 960px;
+      max-width: 1200px;
       padding: 0 20px;
       line-height: 1.6;
     }
@@ -54,18 +54,45 @@
     a {
       color: #1a0dab;
     }
-    key-learnings-box {
-  background-color: #f9f9f9;
-  border-left: 4px solid #007ACC;
-  padding: 1rem;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-.key-learnings-box h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
+
+    .main-layout {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .main-content {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .sidebar-learnings {
+      flex: 1;
+      min-width: 260px;
+      background-color: #f7faff;
+      padding: 1rem;
+      border-left: 4px solid #007acc;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .sidebar-learnings h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      color: #003c6c;
+    }
+
+    .sidebar-learnings ul {
+      padding-left: 1.2rem;
+    }
+
+    .sidebar-learnings li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -89,32 +116,39 @@
 
   <hr>
 
-  <h2>2. Hands-on Work Using Vitis on Versal ACAP</h2>
-  <p>As part of my research, I explored Vitis tutorials to gain practical experience on the VCK190 development board:</p>
-  <ul>
-    <li><strong>A to Z Bare-metal:</strong> Created simple complex arithmetic kernel and graph using 2023.2 Vitis flow.</li>
-    <li><strong>LeNet AI Engine Design:</strong> Developed AIE-based image classification using memory-aware design. Validated on hardware.</li>
-    <li><strong>GeMM Matrix Multiplication:</strong> Compared and designed in RTL/DSP/PS implementations for multiple matrix sizes up to 1024x1024.</li>
-  </ul>
-  <p>I have also implemented some basic applications on AIEs using Vitis tool (AI Engine Kernel and Graph Programming )</p>
-  <ul>
-    <li><strong>Parallel Merge Sort:</strong> Used 11 AI Engine kernels to sort and merge 5000 numbers with shared buffer pipelining.</li>
-    <li><strong>Custom Sum Computation:</strong> Computed sum of 5000 integers using 6 parallel AI Engines mapped across different tiles.</li>
-    <li><strong>Matrix Multiplication Exploration:</strong> Studied shared memory, cascade connections, and kernel placement strategies.</li>
-  </ul>
-  <p><em>All designs were tested using hardware emulation and verified on the actual VCK190 board via SD card deployment.</em></p>
+  <div class="main-layout">
+    <!-- MAIN CONTENT LEFT -->
+    <div class="main-content">
+      <h2>2. Hands-on Work Using Vitis on Versal ACAP</h2>
+      <p>As part of my research, I explored Vitis tutorials to gain practical experience on the VCK190 development board:</p>
+      <ul>
+        <li><strong>A to Z Bare-metal:</strong> Created simple complex arithmetic kernel and graph using 2023.2 Vitis flow.</li>
+        <li><strong>LeNet AI Engine Design:</strong> Developed AIE-based image classification using memory-aware design. Validated on hardware.</li>
+        <li><strong>GeMM Matrix Multiplication:</strong> Compared and designed in RTL/DSP/PS implementations for multiple matrix sizes up to 1024x1024.</li>
+      </ul>
+      <p>I have also implemented some basic applications on AIEs using Vitis tool (AI Engine Kernel and Graph Programming )</p>
+      <ul>
+        <li><strong>Parallel Merge Sort:</strong> Used 11 AI Engine kernels to sort and merge 5000 numbers with shared buffer pipelining.</li>
+        <li><strong>Custom Sum Computation:</strong> Computed sum of 5000 integers using 6 parallel AI Engines mapped across different tiles.</li>
+        <li><strong>Matrix Multiplication Exploration:</strong> Studied shared memory, cascade connections, and kernel placement strategies.</li>
+      </ul>
+      <p><strong><em>All designs were tested using hardware emulation and verified on the actual VCK190 board via SD card deployment.</em></strong></p>
+    </div>
+
+    <!-- SIDEBAR RIGHT -->
+    <div class="sidebar-learnings">
+      <h3>🧠 Key Learnings</h3>
+      <ul>
+        <li><strong>Versal ACAP Architecture:</strong> Developed deep expertise in its features, benefits, and strategic differentiation from traditional FPGAs and GPUs.</li>
+        <li><strong>AI Engine Tile Architecture:</strong> Gained strong understanding of its role in heterogeneous compute.</li>
+        <li><strong>Dataflow Programming:</strong> Explored AI Engine tiles and implemented basic dataflow programs using Vitis and ADF Graph.</li>
+        <li><strong>Hardware-Software Co-Development:</strong> Acquired extensive hands-on experience with Vitis and Vivado for end-to-end design, deployment, and validation.</li>
+        <li><strong>Heterogeneous Computing:</strong> Built comprehensive knowledge on how AI Engines and Programmable Logic complement each other for performance-optimized applications.</li>
+      </ul>
+    </div>
+  </div>
 
   <hr>
-   <div class="key-learnings-box">
-  <h3>Key Learnings During Research</h3>
-  <ul>
-    <li><strong>Versal ACAP Architecture:</strong> Developed deep expertise in its features, benefits, and strategic differentiation from traditional FPGAs and GPUs.</li>
-    <li><strong>AI Engine Tile Architecture:</strong> Gained strong understanding of its role in heterogeneous compute.</li>
-    <li><strong>Dataflow Programming:</strong> Explored AI Engine tiles and implemented basic dataflow programs using Vitis and ADF Graph.</li>
-    <li><strong>Hardware-Software Co-Development:</strong> Acquired extensive hands-on experience with Vitis and Vivado for end-to-end design, deployment, and validation.</li>
-    <li><strong>Heterogeneous Computing:</strong> Built comprehensive knowledge on how AI Engines and Programmable Logic complement each other for performance-optimized applications.</li>
-  </ul>
-</div>
 
   <h2>3. Exploration of Versal ACAP Frameworks</h2>
   <p>Analyzed multiple frameworks for AI acceleration on Versal ACAP including both academic research and open-source contributions:</p>
@@ -181,29 +215,29 @@
     </tbody>
   </table>
 
- <h3>Validated Frameworks</h3>
-<p>Tested the following open-source frameworks on the VCK190 board:</p>
-<ul>
-  <li>
-    <strong>CHARM:</strong>
-    <a href="https://github.com/arc-research-lab/CHARM" target="_blank">
-      https://github.com/arc-research-lab/CHARM
-    </a><br>
-    Validated GEMM (FP32, INT8), BERT, ViT with various accelerator configurations.
-  </li>
-  <li>
-    <strong>AIM:</strong>
-    <a href="https://github.com/arc-research-lab/AIM" target="_blank">
-      https://github.com/arc-research-lab/AIM
-    </a><br>
-    Validated for LIM operations with input bit-widths of 65536, 4096, and 1024 bits.
-  </li>
-  <li>
-    <strong>MaxEVA:</strong>
-    <a href="https://github.com/enyac-group/MaxEVA" target="_blank">
-      https://github.com/enyac-group/MaxEVA
-    </a>
-  </li>
-</ul>
+  <h3>Validated Frameworks</h3>
+  <p>Tested the following open-source frameworks on the VCK190 board:</p>
+  <ul>
+    <li>
+      <strong>CHARM:</strong>
+      <a href="https://github.com/arc-research-lab/CHARM" target="_blank">
+        https://github.com/arc-research-lab/CHARM
+      </a><br>
+      Validated GEMM (FP32, INT8), BERT, ViT with various accelerator configurations.
+    </li>
+    <li>
+      <strong>AIM:</strong>
+      <a href="https://github.com/arc-research-lab/AIM" target="_blank">
+        https://github.com/arc-research-lab/AIM
+      </a><br>
+      Validated for LIM operations with input bit-widths of 65536, 4096, and 1024 bits.
+    </li>
+    <li>
+      <strong>MaxEVA:</strong>
+      <a href="https://github.com/enyac-group/MaxEVA" target="_blank">
+        https://github.com/enyac-group/MaxEVA
+      </a>
+    </li>
+  </ul>
 </body>
 </html>
