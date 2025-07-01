@@ -93,6 +93,12 @@ nav ul li a:hover {
     min-width: 300px;
     text-align: center;
 }
+.research-focus {
+  color: #007acc;
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
 
 #experience {
     text-align: center;
